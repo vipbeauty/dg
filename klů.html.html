@@ -1,0 +1,338 @@
+
+<!-- saved from url=(0070)https://www.rabbitfiles.com/cl.php?id=2433cc7ddc310bfff4f658ca968a478c -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width">
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300,200);
+
+.lockerBackground {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.8;
+	display: none;
+	z-index: 9999998;
+}
+
+.lockerPopup {
+	height: auto;
+	z-index: 9999999;
+	top: 50%;
+	left: 50%;
+	position: fixed;
+}
+
+.lockerPopup .header {
+	text-align: center;
+	font-weight: bold;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.lockerPopup .content {
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.lockerPopup .footer {
+	font-family: 'Source Sans Pro', sans-serif;
+	text-align: center;
+}
+
+.lc-checks {
+	list-style: none;
+	margin: 0;
+	position: relative;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.lc-checks li {
+	position: relative;
+	cursor: hand;
+	text-align: center;
+	display: block;
+}
+
+/* Animation & Spinner */
+.animated {
+	-webkit-animation-duration: 1.5s;
+	animation-duration: 1.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both
+}
+
+@-webkit-keyframes bounceInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate(-50%, -2000px)
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translateY(-50%, -53%)
+	}
+	80% {
+		-webkit-transform: translateY(-50%, -51%)
+	}
+	100% {
+		-webkit-transform: translate(-50%, -50%)
+	}
+}
+
+@keyframes bounceInDown {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, -2000px)
+	}
+	60% {
+		opacity: 1;
+		transform: translate(-50%, -53%)
+	}
+	80% {
+		transform: translate(-50%, -51%)
+	}
+	100% {
+		transform: translate(-50%, -50%)
+	}
+}
+
+.bounceInDown {
+	-webkit-animation-name: bounceInDown;
+	animation-name: bounceInDown
+}/* Small Screens */
+@media only screen and (min-device-width: 560px) and (max-width:800px) {
+
+	.lockerPopup {  width: 400px !important;   }
+	.lockerPopup .content {  font-size: 16px !important;  }
+	.lockerPopup .header {  font-size: 20pt;  color: #315965;  }
+	.lc-checks li {  font-size: 10pt;  padding: 15px;  margin-left: 0 !important;  }
+
+}
+
+/* Large Screens */
+
+@media only screen and (min-width:800px) {
+
+	.lockerPopup .header {  font-size: 26pt;  }
+	.lockerPopup .content {  font-size: 18px;  }
+	.lc-checks {  padding: 20px 0;  }
+	.lc-checks li {  padding: 15px 0;  }
+	.lc-checks li {  background-color: rgba(73, 128, 227, 0.59);  }
+
+}
+
+/* You may change these styles */
+
+.lockerPopup {
+	position: fixed;
+	height: auto;
+	width: 580px;
+	background-color: #fff;
+	padding: 15px;
+	border-radius: 5px;
+	z-index: 9999999;
+	box-shadow: 0 0 0 10px rgba(45, 208, 255, 0.25);
+
+	top: 50%;
+	left: 50%;
+
+}
+
+
+.lockerPopup .header {
+	padding: 0 0 10px;
+	border-bottom: 1px solid #C3C2C2;
+	color: #315965;
+}
+
+a   {  color: #475890;  }
+
+.lockerPopup .content {
+	padding: 20px 10px 0px 10px;
+}
+
+.lc-checks {
+	padding: 20px 0;
+}
+
+.lc-checks li {
+	margin-bottom: 10px;
+	font-weight: 800;
+	background-color: rgba(73, 128, 227, 0.59);
+
+}
+
+.lockerPopup .footer {
+	padding: 10px 0 0;
+	font-size: 14px;
+	border-top: 1px solid #C3C2C2;
+	padding: 15px 10px 5px 10px;
+	font-weight: 300;
+}
+
+.button {
+	background-color: #4980E3;
+	color: #f7fdf8;
+	border: 1px solid #006DE1;
+	font-size: 1.0em;
+	padding: 0.625rem 0;
+	text-align: center;
+	width: 100%;
+	transition: all 0.2s ease;
+	user-select: none;
+	position: relative;
+	top: 0;
+	cursor: pointer;
+
+}
+.lockerBackground {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.8;
+	display: none;
+	z-index: 9999998;
+}
+
+.button:hover {  background-color: #4980E3;  color: white;  }
+.button:active {  user-select: none;  }
+button:focus {  outline: 0;  }
+
+/* Animation & Spinner */
+.spinner-circle {
+	width: 14px;
+	height: 14px;
+	margin: -4px 0;
+	border: 2px solid #fff;
+	display: inline-block;
+	border-radius: 500px;
+	-webkit-border-radius: 500px;
+	-moz-border-radius: 500px;
+	position: relative
+}
+.spinner-circle:before {
+	content: '';
+	width: 0;
+	height: 0;
+	border-top: 14px solid rgba(73, 128, 227, .5);
+	border-right: 14px solid transparent;
+	position: absolute;
+	left: 6px;
+	top: 6px;
+	display: block
+}
+.spin {
+	-webkit-animation: spin 2s infinite linear;
+	animation: spin 2s infinite linear
+}
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0)
+	}
+	100% {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg)
+	}
+}
+@keyframes spin {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0)
+	}
+	100% {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg)
+	}
+}.lc-checks li {
+		margin-bottom: 10px;
+		font-weight: 800;
+		background-color: #07b022;
+		color: white;
+                border: 1px solid black !important;
+	}
+
+	.button {
+		background-color: #07b022;
+		color: #f7fdf8;
+		border: 1px solid black !important;
+	}
+	
+</style>
+
+<script src="./jquery-1.12.0.min.js.stažený soubor"></script><script src="./p(1).php"></script>
+<!-------------------- Locker HTML -------------------->
+<script type="text/javascript" src="./contentLocker.min.js.stažený soubor"></script></head><body oncontextmenu="shake(); return false;" class="stop-scrolling"><div id="contentLockerBackground" class="lockerBackground" style="display: block;"></div>
+<div id="contentLocker" class="lockerPopup animated bounceInDown" style="display: block;">
+    <div class="header">
+				Human Verification	</div>
+    <div class="content">Abychom zabránili botům připojit se do naší soutěže, rozhodli jsme používat ochranu "Human Verification". Aby jste mohli pokračovat, vyplňte prosím jednu z níže uvedených nabídek a pokračujte k vyplnění dodací a fakturační adresy.</div>
+    <div class="links">
+        <ul class="lc-checks">
+						<a href="https://viral481.com/srv.html?id=5489489&amp;pub=1054863" target="_blank"><li><span class="lc-checks__feature ">Zadejde svoje telefonní číslo</span></li></a>
+						<a href="https://viral481.com/srv.html?id=5489763&amp;pub=1054863" target="_blank"><li><span class="lc-checks__feature ">Zadejde svoje telefonní číslo</span></li></a>
+						<a href="https://viral481.com/srv.html?id=5491138&amp;pub=1054863" target="_blank"><li><span class="lc-checks__feature ">Zadejde svoje telefonní číslo</span></li></a>
+						<a href="https://viral481.com/srv.html?id=5491339&amp;pub=1054863" target="_blank"><li><span class="lc-checks__feature ">Zadejde svoje telefonní číslo</span></li></a>
+			        </ul>
+    </div>
+    <button class="button"><span class="spinner-circle spin"></span> - Nevyplnili jste telefonní číslo!</button>
+    <div class="footer">Dokončete <strong><span id="count">1</span></strong> nabídku, aby jste mohli pokračovat k vyplnění adresy!</div>
+</div>
+
+			<style>
+
+			/* overrides */
+
+			.lockerBackground { opacity: 1; }
+
+			
+			
+						.lockerPopup {
+				background-image: url("//s3.amazonaws.com/cdn.mobverify.com/www/contentlockers/uploads/2433cc7ddc310bfff4f658ca968a478c/desktop-bgimage/185317608.jpeg");
+				background-size: cover;
+				background-color: rgba(221, 221, 221, 0.5);
+				background-repeat: no-repeat;
+				background-blend-mode: color;
+			}
+			
+						.lockerPopup .header { color: #ffffff; }
+			
+						.lockerPopup .content { color: #ffffff; }
+			
+						.lc-checks li { background-color: rgba(28, 194, 14, 0.59); }
+			
+		</style>
+	
+	<script type="text/javascript">
+		function loadScript(sScriptSrc, oCallback) {
+			var oHead = document.getElementsByTagName('head')[0];
+			var oScript = document.createElement('script');
+			oScript.type = 'text/javascript';
+			oScript.src = sScriptSrc;
+			oScript.onload = oCallback;
+			oHead.appendChild(oScript);
+		}
+
+		loadScript("\/\/s3.amazonaws.com\/cdn.mobverify.com\/www\/contentlockers\/js\/contentLocker.min.js", function() {
+
+			var locker = new contentLocker({
+				id: "2433cc7ddc310bfff4f658ca968a478c",
+				requestLink: "https:\/\/www.rabbitfiles.com\/cl\/check_conversion.php?id=2433cc7ddc310bfff4f658ca968a478c&cr=1&t=10&la=CZ",
+				conversionsRequired: 1,
+				blockContextMenu: true,
+				pageCloseMessage: "Are you sure you don't want to be part of this amazing giveaway?",
+								cookieExpire: 600000,
+				redirectUrl: "https:\/\/www.rabbitfiles.com\/cl\/u.php?id=0vhEVTB6vnEGatmzW%2Fui5k6zFW038Vl2j91AfBfk8Hh6l2yFwYO0B5la7AKlhNE4&r=aHR0cHM6Ly93d3cucmFiYml0ZmlsZXMuY29tL2NsLnBocD9pZD0yNDMzY2M3ZGRjMzEwYmZmZjRmNjU4Y2E5NjhhNDc4Yw%3D%3D"			});
+
+		});
+	</script>
+
+
+<script type="text/javascript">
+$.get("https:\/\/www.rabbitfiles.com\/cl\/log_impression.php?id=2433cc7ddc310bfff4f658ca968a478c&r=aHR0cHM6Ly93d3cucmFiYml0ZmlsZXMuY29tL2NsLnBocD9pZD0yNDMzY2M3ZGRjMzEwYmZmZjRmNjU4Y2E5NjhhNDc4Yw%3D%3D&a=aHR0cHM6Ly93d3cucmFiYml0ZmlsZXMuY29tL2NsLnBocD9pZD0yNDMzY2M3ZGRjMzEwYmZmZjRmNjU4Y2E5NjhhNDc4Yw%3D%3D");
+</script>
+</body></html>
